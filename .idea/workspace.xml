@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33ea8bee-ff64-4f62-a7f2-7e8cd9ec2b51" name="Default Changelist" comment="" />
+    <list default="true" id="33ea8bee-ff64-4f62-a7f2-7e8cd9ec2b51" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +18,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1huZ2jSaUhFpVjIynlZ7ZcjjdYO" />
@@ -30,7 +33,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -88,12 +94,27 @@
       <workItem from="1601569356385" duration="1135000" />
       <workItem from="1601572781667" duration="1253000" />
       <workItem from="1602777967118" duration="623000" />
-      <workItem from="1603185734620" duration="949000" />
+      <workItem from="1603185734620" duration="1425000" />
     </task>
+    <task id="LOCAL-00001" summary="Implemented synched threads with shared resource, unsynched shared, unshared unsynched">
+      <created>1603186901687</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603186901687</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Studie/Semester 3/MultithreadingGit" />
+    </ignored-roots>
+    <MESSAGE value="Implemented synched threads with shared resource, unsynched shared, unshared unsynched" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented synched threads with shared resource, unsynched shared, unshared unsynched" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="138" key="#com.intellij.ide.util.MemberChooser" timestamp="1601129280841">
@@ -112,6 +133,10 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="458" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.797@0.23.1440.797" timestamp="1601215175332" />
+    <state x="314" y="24" key="CommitChangelistDialog2" timestamp="1603186901564">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="314" y="24" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1603186901564" />
     <state x="529" y="344" key="Github.CreateGistDialog" timestamp="1603186346510">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
@@ -156,6 +181,10 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1398" height="253" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1601572241915" />
+    <state x="208" y="23" key="SettingsEditor" timestamp="1603187162749">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="208" y="23" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1603187162749" />
     <state x="320" y="161" key="Vcs.Push.Dialog.v2" timestamp="1603186027549">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
