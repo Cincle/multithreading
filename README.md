@@ -76,14 +76,14 @@ Een andere oplossing is om de threads niet met elkaar te laten concurreren. Elke
 
 **Bronnen**
 
-*https://www.javatpoint.com/multithreading-in-java
-*https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)
-*https://www.tutorialspoint.com/the-benefits-of-multithreaded-programming
-*https://www.tutorialspoint.com/operating_system/os_multi_threading.htm
-*https://blog.usejournal.com/java-multithreading-part-1-ec0c42bbead6
-*https://blog.usejournal.com/java-multithreading-part-1-ec0c42bbead6
-*https://alvinalexander.com/scala/fp-book/recursion-jvm-stacks-stack-frames/
-*https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-2.html
-*https://javarevisited.blogspot.com/2012/02/what-is-race-condition-in.html
-*https://www.geeksforgeeks.org/atomic-variables-in-java-with-examples/
-*https://www.guru99.com/multithreading-java.html
+* https://www.javatpoint.com/multithreading-in-java
+* https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)
+* https://www.tutorialspoint.com/the-benefits-of-multithreaded-programming
+* https://www.tutorialspoint.com/operating_system/os_multi_threading.htm
+* https://blog.usejournal.com/java-multithreading-part-1-ec0c42bbead6
+* https://blog.usejournal.com/java-multithreading-part-1-ec0c42bbead6
+* https://alvinalexander.com/scala/fp-book/recursion-jvm-stacks-stack-frames/
+* https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-2.html
+* https://javarevisited.blogspot.com/2012/02/what-is-race-condition-in.html
+* https://www.geeksforgeeks.org/atomic-variables-in-java-with-examples/
+* https://www.guru99.com/multithreading-java.html
