@@ -36,7 +36,14 @@ Multithreading is niet aan te raden bij applicaties waarbij responstijden van UI
 
 Objecten in het geheugen leven in de heap. De heap wordt gedeeld door threads; deze objecten kunnen dus door alle actieve threads gebruikt worden.
 In een single thread applicatie is dit geen enkel probleem: er kan immers slechts één object tegelijkertijd gebruikt worden aangezien de ene thread sequentieel verloopt.
+
 In een multithreaded applicatie kan een object door meerdere threads gebruikt worden. Het voordeel van deze gedeelde objecten is dat er parralel gewerkt kan worden met de objecten, waardoor een hogere mate van efficiëntie kan worden behaald.
 Een nadeel is dat een thread de status van een object kan veranderen voordat een andere thread ermee aan de slag gaat, waardoor de uitkomst van operaties onverwacht kan zijn. Een ander nadeel is dat meerdere threads met elkaar kunnen concurreren op een object en hier tegelijktijdig op opereren, waardoor datacorruptie kan ontstaan, en het resultaat van de operatie onbetrouwbaar wordt. Dit wordt later uitgelegd in 3.5. Race condition. Deze zaken maken het programmeren van de applicatie complexer.
 
-**3.4.
+**3.4. Hoe wordt het onderdeel genoemd waar methoden worden uitgevoerd en primitive types in het geheugen worden geplaatst 
+en hoe is dit verschillend in een multithreaded application?**
+
+Methoden worden uitgevoerd en primitieve types worden geplaatst in de Stack. Op het moment dat er een nieuwe thread wordt gecreëerd, wordt er ook een stack hiervoor aangemaakt. Vervolgens wordt op het moment dat een nieuwe methode wordt aangeroepen in de stack een frame aangemaakt en bovenin de stack geplaatst(de JVM pusht de frame op de stack). In de frame staan lokale variabelen, en referentie variabelen naar objecten waarop geopereerd kan worden (enkel een referentie variabele naar een geheugenadres in de heap; de objecten zelf leven in de heap).
+Zodra een frame voltooid is wordt deze van de stack gehaald (de JVM popt het frame), en vervolgen de operaties op het onderliggende frame. Zo onstaat er per stack een sequentiele flow of execution waarbij de methoden worden uitgevoerd volgende een Last In First Out (LIFO) principe.
+
+In een multithreaded applicatie onstaan er dus meerdere stacks: volgens de Oracle JVM specification wordt er een nieuwe stack gecreëerd op het moment dat er een nieuwe thread wordt gecreëerd. Elke stack heeft eigen frames en lokale variabelen, wat betekend dat deze dus niet uitwisselbaar zijn. Het gedeelde geheugen waar alle threads op kunnen opereren leven in de heap, waar elke stack middels de referentievariabele naartoe refereerd.
