@@ -47,3 +47,29 @@ Methoden worden uitgevoerd en primitieve types worden geplaatst in de Stack. Op 
 Zodra een frame voltooid is wordt deze van de stack gehaald (de JVM popt het frame), en vervolgen de operaties op het onderliggende frame. Zo onstaat er per stack een sequentiele flow of execution waarbij de methoden worden uitgevoerd volgende een Last In First Out (LIFO) principe.
 
 In een multithreaded applicatie onstaan er dus meerdere stacks: volgens de Oracle JVM specification wordt er een nieuwe stack gecreëerd op het moment dat er een nieuwe thread wordt gecreëerd. Elke stack heeft eigen frames en lokale variabelen, wat betekend dat deze dus niet uitwisselbaar zijn. Het gedeelde geheugen waar alle threads op kunnen opereren leven in de heap, waar elke stack middels de referentievariabele naartoe refereerd.
+
+**3.5. Wat is in dit kader een racing condition en hoe zou dit voorkomen kunnen worden?**
+
+Een racing condition is als concurrerende threads gelijktijdig proberen te opereren op een object uit de heap, waardoor de data in dit object gecorrupteerd kan worden.
+Een voorbeeld hiervan kan met een simpele loop (een "Check and Act" race condition):
+
+for (int i = 0; 1 < 100; i++) {
+  x += i;
+  }
+
+* Thread 1 checkt de conditie
+* Thread 2 checkt de conditie
+* Thread 1 kopieerd x
+* Thread 2 kopieerd x
+* Thread 1 opereerd op x
+* Thread 2 opereerd op x
+* Thread 1 kopieerd operant terug naar x
+* Thread 2 kopieerd operant terug naar x
+* Thread 1 verhoogd i met 1
+* Thread 2 verhoogd i met 1
+
+In bovengenoemd voorbeeld kopieren thread 1 en 2 dezelfde waarde x; er wordt immers verwezen naar hetzelfde object, en de nieuwe waarde is nog niet terug gekopieerd. Na het opereren en terug kopieren tellen beide echter wel i op; de waarde is dus niet meer betrouwbaar en er is een Race condition.
+
+Dit kan worden opgelost door de methode te synchroniseren: er kan dan slechts één thread mee aan de slag; de thread heeft een "lock" op de methode.
+Ook bieden meerdere programmeertalen de mogelijkheid om Atomic variabelen te gebruiken; de variabele zelf is dan door slechts één thread tegelijk te gebruiken. Er wordt een lock op de variabele geplaatst, en deze valt vrij als een thread klaar is met het opereren hierop.
+Een andere oplossing is om de threads niet met elkaar te laten concurreren. Elke thread krijgt een eigen object om op te opereren. In bovenstaand geval zou de range van i verdeeld worden over de threads, en als alle threads klaar zijn de waarde van x bij elkaar worden opgeteld. Deze oplossing leverd het minst overhead op, maar kan complex zijn om te implementeren.
