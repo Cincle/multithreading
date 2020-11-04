@@ -73,3 +73,17 @@ In bovengenoemd voorbeeld kopieren thread 1 en 2 dezelfde waarde x; er wordt imm
 Dit kan worden opgelost door de methode te synchroniseren: er kan dan slechts één thread mee aan de slag; de thread heeft een "lock" op de methode.
 Ook bieden meerdere programmeertalen de mogelijkheid om Atomic variabelen te gebruiken; de variabele zelf is dan door slechts één thread tegelijk te gebruiken. Er wordt een lock op de variabele geplaatst, en deze valt vrij als een thread klaar is met het opereren hierop.
 Een andere oplossing is om de threads niet met elkaar te laten concurreren. Elke thread krijgt een eigen object om op te opereren. In bovenstaand geval zou de range van i verdeeld worden over de threads, en als alle threads klaar zijn de waarde van x bij elkaar worden opgeteld. Deze oplossing leverd het minst overhead op, maar kan complex zijn om te implementeren.
+
+**Bronnen**
+
+*https://www.javatpoint.com/multithreading-in-java
+*https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)
+*https://www.tutorialspoint.com/the-benefits-of-multithreaded-programming
+*https://www.tutorialspoint.com/operating_system/os_multi_threading.htm
+*https://blog.usejournal.com/java-multithreading-part-1-ec0c42bbead6
+*https://blog.usejournal.com/java-multithreading-part-1-ec0c42bbead6
+*https://alvinalexander.com/scala/fp-book/recursion-jvm-stacks-stack-frames/
+*https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-2.html
+*https://javarevisited.blogspot.com/2012/02/what-is-race-condition-in.html
+*https://www.geeksforgeeks.org/atomic-variables-in-java-with-examples/
+*https://www.guru99.com/multithreading-java.html
