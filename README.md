@@ -121,4 +121,4 @@ De calculator wordt als controle uitgevoerd op een enkele thread, zonder synchro
 * https://www.guru99.com/multithreading-java.html
 * https://www.geeksforgeeks.org/dining-philosopher-problem-using-semaphores/
 
-*Afbeelding Philosophers Dining Problem door Benjamin D. Esham ongewijzigd gebruikt onder Creative Commons licentie: https://creativecommons.org/licenses/by-sa/3.0/deed.en
+*Afbeelding Philosophers Dining Problem door Benjamin D. Esham ongewijzigd gebruikt onder Creative Commons licentie:* https://creativecommons.org/licenses/by-sa/3.0/deed.en
